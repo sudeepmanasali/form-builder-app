@@ -9,6 +9,16 @@
       name="description"
       content="Web site created using create-react-app"
     />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.form.min.css" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous">
+
+
+  
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -38,6 +48,56 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
+      <div id="formio"></div>
+
     -->
+ 
+    <div id="builder"></div>
+
+
+    <div id="formio" style="width:80%;margin:20px auto;"></div>
+
+
+    <script src="    https://cdn.form.io/formiojs/formio.full.min.js
+    " crossorigin="anonymous"></script>
+<!-- <script>
+  let formData = {}
+  window.onload = function(){
+    if(location.pathname == '/form'){
+        
+        Formio.builder(document.getElementById('builder')).then(function(form){
+         
+         form.on("change", function(e){
+             console.log(form)
+             Formio.createForm(document.getElementById("formio"), form.schema);
+             formData = form.schema
+ 
+         });
+         console.log(form.submission)   
+ });
+
+ let btn = document.getElementById('submitform')
+ let data = {num:"1234"}
+ btn.onclick = ()=>{
+ fetch('http://localhost:5001/form', {
+  method: 'POST', // or 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(formData),
+})
+.then(response => console.log(response))
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});}
+  }}
+</script>
+     -->
+ 
+
+
   </body>
 </html>
